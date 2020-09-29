@@ -11,6 +11,11 @@ const getWeatherData = async (area) => {
   const data = await fetch(url)
     .then(response => response.json())
     .catch(error => console.error(error));
+  // catch時の処理
+  if (data.cod !== 200) {
+    document.getElementById('currentArea').textContent = '通信に失敗した為,天気を取得できませんでした。しばらく経ってから再度お試し下さい。';
+    return;
+  }
   // Dataを変数に入れる
   const areaName = data.name;
   const icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
