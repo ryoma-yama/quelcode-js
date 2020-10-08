@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript_課題1_天気API</title>
+  </head>
+  <body>
+    <h1>プルダウンで選択した地域の天気を取得する</h1>
+    <label for="pullDown">地域</label>
+    <select id="pullDown">
+      <option value="London,GB">ロンドン</option>
+      <option value="Tokyo,JP">東京</option>
+      <option value="Paris,FR">パリ</option>
+      <option value="New York,US">ニューヨーク</option>
+      <option value="Republic of Indonesia,ID">インドネシア</option>
+    </select>
+    <section>
+      <h2 id="currentArea"></h2>
+      <img id="weatherIcon" alt="天気の状態" />
+      <p id="currentWeather"></p>
+      <p id="currentTemperature"></p>
+      <p id="currentHumidity"></p>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
